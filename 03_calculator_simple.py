@@ -1,6 +1,4 @@
 from tkinter import ttk, Tk, END
-#from tkinter import *
-#Popup durch "messagebox"
 
 def buttonPlusClick():
     zahl1 = float (entry1.get())                #Zahl1 von Eingabefeld holen
@@ -32,7 +30,6 @@ def buttonClearClick():
     entry2.delete (0, last=END)
     lErgebnis.config(text="")
     
-
 #Root Fenster erstellen
 root = Tk()
 
@@ -59,7 +56,6 @@ entry1.grid(row=0, column=1, padx=5, pady=5)
 entry2 = ttk.Entry(root, background="white", width=8)
 entry2.grid(row=2, column=1, padx=5, pady=5)
 
-
 #Operatoren-Buttons
 bPlus = ttk.Button(root, text=" + ", width=2, command=buttonPlusClick)
 bPlus.grid(row=0, column=2, padx=5, pady=5)
@@ -78,7 +74,6 @@ bModulor.grid(row=4, column=2, padx=5, pady=5)
 
 bClear =  ttk.Button(root, text=" C ", width=2, command=buttonClearClick)
 bClear.grid(row=5, column=2, padx=5, pady=5)  
-
 
 #mainloop-Methode zeigt auf das Root-Fenster; Fenster bleibt solange offen bis x gedrückt wird
 root.mainloop()
